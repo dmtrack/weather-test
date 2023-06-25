@@ -1,0 +1,128 @@
+@import '../../../styles/_variables.scss';
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    margin-right: 6px;
+
+    & .menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 37px;
+    }
+
+    & .item {
+        margin-left: 5px;
+    }
+
+    & .link {
+        font-size: $font-size-xs;
+        line-height: $line-height-xs;
+        font-weight: $font-weight-semibold;
+        transition: $effects-transition;
+        color: $color-dark-blue;
+
+        &:hover {
+            opacity: $effects-hover-opacity;
+        }
+    }
+
+    & .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+
+        display: none;
+
+        background-color: $color-black;
+        opacity: 0;
+    }
+
+    & .burger {
+        z-index: 5;
+
+        display: none;
+
+        border: none;
+        background-color: transparent;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &--active {
+            transform: translateX(-12px);
+
+            & .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            & .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            & .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+
+        & .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: $color-black;
+            transition: $effects-transition;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        & .burger {
+            display: block;
+        }
+
+        & .overlay {
+            display: flex;
+            transition: $effects-transition;
+
+            &--active {
+                opacity: 0.2;
+                z-index: 1;
+            }
+        }
+
+        & .menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 3;
+            flex-direction: column;
+            width: 300px;
+            height: 100vh;
+            padding-top: 130px;
+            background-color: $color-white;
+            transition: $effects-transition;
+            transform: translateX(100%);
+
+            &--active {
+                transform: translateX(0);
+            }
+        }
+
+        & .item {
+            width: 100%;
+            text-align: center;
+        }
+
+        & .link {
+            display: inline-block;
+            width: 100%;
+        }
+    }
+}

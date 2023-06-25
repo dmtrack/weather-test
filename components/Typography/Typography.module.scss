@@ -1,0 +1,78 @@
+@import '../../styles/_variables.scss';
+
+.h1 {
+    font-size: $font-size-xxxl;
+    line-height: $line-height-xxxl;
+}
+
+.h2 {
+    font-size: $font-size-xxl;
+    line-height: $line-height-xxl;
+}
+
+.h3 {
+    font-size: $font-size-xxl;
+    line-height: $line-height-xxl;
+}
+
+.p {
+    font-size: $font-size-xs;
+    line-height: $line-height-xs;
+}
+
+.regular {
+    font-weight: $font-weight-regular;
+}
+
+.semibold {
+    font-weight: $font-weight-semibold;
+}
+
+.bold {
+    font-weight: $font-weight-bold;
+}
+
+.black {
+    color: $color-black;
+}
+
+.white {
+    color: $color-white;
+}
+
+.gray {
+    color: $color-gray;
+}
+
+.dark-blue {
+    color: $color-dark-blue;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .h1 {
+        font-size: $font-size-m;
+        line-height: $line-height-ml;
+    }
+
+    .h2 {
+        font-size: $font-size-sm;
+        line-height: $line-height-sm;
+    }
+
+    .h3 {
+        font-size: $font-size-sm;
+        line-height: $line-height-sm;
+    }
+}

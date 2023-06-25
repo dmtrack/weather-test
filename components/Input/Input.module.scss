@@ -1,0 +1,28 @@
+@import '../../styles/variables.scss';
+
+.input {
+    border: 2px solid $color-white;
+
+    &:focus {
+        outline: none;
+    }
+
+    &--m {
+        padding: 12px 32px;
+        max-width: 370px;
+        width: 100%;
+        font-size: $font-size-s;
+        line-height: $line-height-s;
+        border-radius: 240px;
+    }
+
+    &--color-white {
+        background-color: $color-white;
+    }
+
+    &--placeholder-black {
+        &::placeholder {
+            color: $color-black;
+        }
+    }
+}

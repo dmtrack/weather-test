@@ -1,0 +1,90 @@
+@import '../../styles/variables.scss';
+
+.section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 85px;
+    margin-bottom: 42px;
+
+    & .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding: 0 100px;
+
+        @media (max-width: 968px) {
+            padding: 0 50px;
+        }
+
+        @media (max-width: 700px) {
+            padding: 0 15px;
+        }
+
+        & .image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+    }
+
+    & .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 72px 20px;
+
+        @media (max-width: 968px) {
+            padding: 50px 20px;
+        }
+    }
+
+    & .wrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 750px;
+        width: 100%;
+        gap: 41px;
+    }
+
+    & .title {
+        @media (max-width: 968px) {
+            font-size: $font-size-sm;
+            line-height: $line-height-sm;
+            padding: 0 100px;
+
+            @media (max-width: 700px) {
+                padding: 0 30px;
+            }
+
+            @media (max-width: 420px) {
+                padding: 0 15px;
+            }
+        }
+    }
+
+    & .form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 24px;
+        width: 100%;
+
+        @media (max-width: 968px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        & .input {
+            height: 61px;
+        }
+    }
+}
